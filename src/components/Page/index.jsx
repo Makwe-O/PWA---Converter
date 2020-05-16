@@ -4,7 +4,7 @@ import FormSection from '../Form';
 const Page = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = { light: 'gray.50', dark: 'gray.800' };
-  const bgLogoColor = { light: 'gray.100', dark: 'gray.800' };
+  const bgLogoColor = { light: 'gray.100', dark: 'gray.900' };
   const color = { light: 'gray.700', dark: 'white' };
   return (
     <Box d='flex' h='100vh'>
@@ -48,11 +48,15 @@ const Page = () => {
         <Button
           onClick={toggleColorMode}
           position='absolute'
+          variantColor='blue'
+          variant='outline'
           top='2%'
           right='2%'>
           Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
         </Button>
-        Enter the Amount and the currency that want to be converted to Bitcoin
+        <Text fontSize='xl' mb='8' textAlign='center'>
+          Enter the Amount and the currency that want to be converted to Bitcoin
+        </Text>
         <FormSection />
       </Box>
     </Box>
