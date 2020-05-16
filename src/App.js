@@ -1,14 +1,14 @@
 import React from 'react';
 import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core';
 import customTheme from './theme';
-import Nav from './components/Nav';
+import Page from './components/Page';
 
 function App() {
   return (
     <ThemeProvider theme={customTheme}>
       <CSSReset />
       <ColorModeProvider>
-        <Nav />
+        <Page />
       </ColorModeProvider>
     </ThemeProvider>
   );
