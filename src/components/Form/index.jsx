@@ -35,12 +35,14 @@ const FormSection = () => {
         validationSchema={yup.object({
           ...formValidationSchema,
         })}
-        onSubmit={(values, actions) => {
+        onSubmit={async (values, actions) => {
           actions.setSubmitting(true);
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false);
-          }, 1000);
+          const fetchBitCoinEquiv = await fetch(
+            `https://blockchain.info/tobtc?currency=${values.currency}&value=${values.amount}`,
+          );
+          const parseBitCoinEquiv = await fetchBitCoinEquiv.json();
+          setBitCoin(parseBitCoinEquiv);
+          actions.setSubmitting(false);
         }}>
         {({ values, handleChange, errors, isSubmitting, initialValues }) => (
           <Form>
