@@ -1,0 +1,14 @@
+.box {
+  display: none !important;
+}
+.box-animation {
+  display: block !important;
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    display: flex !important;
+  }
+  .box-animation {
+    display: none !important;
+  }
+}

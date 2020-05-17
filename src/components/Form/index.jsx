@@ -31,7 +31,7 @@ const FormSection = () => {
   return (
     <>
       <Formik
-        initialValues={{ currency: '', amount: 2 }}
+        initialValues={{ currency: '', amount: 0 }}
         validationSchema={yup.object({
           ...formValidationSchema,
         })}
@@ -90,7 +90,7 @@ const FormSection = () => {
         )}
       </Formik>
       <Box d='flex' alignItems='baseline' mt='8'>
-        <Text fontSize='6xl'>{bitCoin}</Text>
+        <Text fontSize='4xl'>{bitCoin}</Text>
         <Text fontSize='xl'>BTC</Text>
       </Box>
     </>
