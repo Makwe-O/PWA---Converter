@@ -31,8 +31,8 @@ const Page = () => {
           PWA Bitcoin converter
         </Text>
         <Text fontSize='md'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed delectus
-          .
+          So you got a stack of cash... Thats cool. Lets see how much those
+          racks are in bitcoin
         </Text>
 
         <Link
